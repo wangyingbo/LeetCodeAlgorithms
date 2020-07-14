@@ -4,12 +4,16 @@ var lengthOfLongestSubstring = function(s) {
 	var maxLength = 0,i = 0,j = 0;
 	while (i<n && j<n) {
 		if (!list.includes(s[j])) {
-			list.push(s[j++]);
+			list.push(s[j]);
+			j++;
 			maxLength = Math.max(maxLength, j - i);
+			// console.log(`${j}-${i}`);
 		}else {
-			list.pop(s[i++]);
+			list.shift();
+			i++;
+			// console.log("i的值"+`${i}`);
 		}
-		//console.log(list);
+		// console.log(list);
 	}
 
 	return maxLength;
@@ -20,4 +24,4 @@ var lengthOfLongestSubstringOther = function(s) {
 }
 
 
-console.log(lengthOfLongestSubstring("abcabcbb"));
+console.log(lengthOfLongestSubstring("pwwkew"));
