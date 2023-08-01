@@ -1,6 +1,6 @@
 "use strict";
 
-var _merge_array = require("./Resources/merge_array");
+var _merge_array = require("./interview150/1_merge_array.js");
 
 console.log("hello world");
 

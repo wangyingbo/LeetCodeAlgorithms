@@ -1,4 +1,4 @@
-import { merge_array_start } from "./Resources/merge_array";
+import { merge_array_start } from './interview150/1_merge_array.js';
 
 console.log("hello world");
 
