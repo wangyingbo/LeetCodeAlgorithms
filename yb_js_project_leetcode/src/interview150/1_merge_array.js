@@ -1,13 +1,13 @@
 
 // https://leetcode.cn/problems/merge-sorted-array/?envType=study-plan-v2&envId=top-interview-150
 
-/**
- * @param {number[]} nums1
- * @param {number} m
- * @param {number[]} nums2
- * @param {number} n
- * @return {void} Do not return anything, modify nums1 in-place instead.
- */
+// /**
+//  * @param {number[]} nums1
+//  * @param {number} m
+//  * @param {number[]} nums2
+//  * @param {number} n
+//  * @return {void} Do not return anything, modify nums1 in-place instead.
+//  */
 // var merge = function(nums1, m, nums2, n) {
 //     var total = [];
 //     if (nums1.length < 1) {
@@ -66,7 +66,28 @@
 
 
 var merge = function(nums1, m, nums2, n) {
-    
+    var lastIndex = 0;
+    for(let i = 0;i < n;i++) {
+        let num2 = nums2[i];
+        for (let j = lastIndex; j < m + i + 1; j++) {
+            let num1 = nums1[j];
+            if (num2 <= num1) {
+                nums1.splice(j, 0, num2);
+                lastIndex = j + 1;
+                break;
+            }
+            if (j === m + i) {
+                nums1.splice(j + 1, 0, num2);
+                lastIndex = j + 2;
+                break;
+            }
+        }
+
+        let lastObj = nums1[nums1.length - 1];
+        if (lastObj === 0) {
+            nums1.pop();
+        }
+    }
 };
 
 var merge_array_start = function() {
@@ -75,6 +96,6 @@ var merge_array_start = function() {
     merge(nums1,6,nums2,3);
     console.log("....................");
     console.log(nums1);
-}
+};
 
-export {merge_array_start}
+export { merge_array_start }
