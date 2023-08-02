@@ -66,26 +66,47 @@
 
 
 var merge = function(nums1, m, nums2, n) {
+    if (m === 0) {
+        nums1.splice(0,nums1.length);
+        nums1.push.apply(nums1,nums2);
+        return;
+    }
+    var deleteSuffix = function(arr) {
+        let last = arr[arr.length - 1];
+        let first = arr[0];
+        if (arr.length >=2) {
+            let preLast = arr[arr.length - 2];
+            if (last < preLast || last < first || (first === 0 && last === 0)) {
+                arr.pop();
+                deleteSuffix(arr);
+            }
+        }else if (arr.length === 1 && first === 0) {
+            arr.pop();
+        }
+    }
+    deleteSuffix(nums1);
+    deleteSuffix(nums2);
+    console.log(nums1);
+    m = nums1.length;
+    n = nums2.length;
+
     var lastIndex = 0;
     for(let i = 0;i < n;i++) {
         let num2 = nums2[i];
-        for (let j = lastIndex; j < m + i + 1; j++) {
+        for (let j = lastIndex; j < m + n + 1; j ++) {
+            if (j === nums1.length) {
+                let nums1Length = nums1.length;
+                nums1.splice(nums1Length, 0, num2);
+                lastIndex = nums1Length + 1;
+                break;
+            }
+
             let num1 = nums1[j];
             if (num2 <= num1) {
                 nums1.splice(j, 0, num2);
                 lastIndex = j + 1;
                 break;
             }
-            if (j === m + i) {
-                nums1.splice(j + 1, 0, num2);
-                lastIndex = j + 2;
-                break;
-            }
-        }
-
-        let lastObj = nums1[nums1.length - 1];
-        if (lastObj === 0) {
-            nums1.pop();
         }
     }
 };
