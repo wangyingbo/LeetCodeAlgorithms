@@ -76,7 +76,7 @@ var merge = function(nums1, m, nums2, n) {
         let first = arr[0];
         if (arr.length >=2) {
             let preLast = arr[arr.length - 2];
-            if (last < preLast || last < first || (first === 0 && last === 0)) {
+            if (last < preLast || last < first || (preLast === 0 && last === 0)) {
                 arr.pop();
                 deleteSuffix(arr);
             }
