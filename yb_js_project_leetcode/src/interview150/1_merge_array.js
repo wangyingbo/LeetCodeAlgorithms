@@ -1,6 +1,8 @@
 
 // https://leetcode.cn/problems/merge-sorted-array/?envType=study-plan-v2&envId=top-interview-150
 
+/**-------------------------------- mine -------------------------------- */
+
 // /**
 //  * @param {number[]} nums1
 //  * @param {number} m
@@ -115,6 +117,8 @@
 
 
 /**-------------------------------- leetcode -------------------------------- */
+
+
 // 官方解法一：双指针
 // var merge = function(nums1, m, nums2, n) {
 //     let p1 = 0, p2 = 0;
@@ -185,8 +189,9 @@ var merge = function(nums1, m, nums2, n) {
 
 
 
+/**-------------------------------- test -------------------------------- */
 
-var merge_array_start = function() {
+var start_merge_array = function() {
     var nums1 = [-1,0,0,3,3,3,0,0,0];
     var nums2 = [1,2,2];
     merge(nums1,6,nums2,3);
@@ -194,4 +199,4 @@ var merge_array_start = function() {
     console.log(nums1);
 };
 
-export { merge_array_start }
+export { start_merge_array }

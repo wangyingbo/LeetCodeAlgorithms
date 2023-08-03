@@ -1,7 +1,7 @@
-import { merge_array_start } from './interview150/1_merge_array.js';
+import { start_merge_array } from './interview150/1_merge_array.js';
 
 
-merge_array_start();
+start_merge_array();
 
 
 
