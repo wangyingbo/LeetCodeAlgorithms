@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "yb_build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "yb_build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./webpack.config.js,./package.json,./package-lock.json,./ybinit.sh,./wbnpx.sh,./ybversion.sh,./.vscode --no-copy-ignored",
     "yb_babel_es2015": "npm run yb_build && node dist/src/index.js",
     "yb_babel_es6": "babel-node ./src/index.js",
     "yb_webpack_npx": "npx webpack && node dist/bundle.js",
+    "yb_webpack_ybnpx": "./ybnpx.sh ; node dist/bundle.js",
     "yb_webpack_server": "webpack-dev-server  --open"
   },
   "keywords": [],
