@@ -31,6 +31,7 @@ yellow(){
 get_increase_number() {
 	if [[ -e ${CACHE_PATH} ]]; then
 		NUM=$(tail -n 1 ${CACHE_PATH})
+		echo "${NUM}" > /dev/null
 		# return $NUM
 	else 
 		yellow "warning: version.data 不存在！！"
