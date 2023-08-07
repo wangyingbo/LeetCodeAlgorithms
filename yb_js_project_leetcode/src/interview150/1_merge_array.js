@@ -1,5 +1,5 @@
 
-// https://leetcode.cn/problems/merge-sorted-array/?envType=study-plan-v2&envId=top-interview-150
+// 官方链接：https://leetcode.cn/problems/merge-sorted-array/?envType=study-plan-v2&envId=top-interview-150
 
 /**-------------------------------- mine -------------------------------- */
 
@@ -195,7 +195,7 @@ var start_merge_array = function() {
     var nums1 = [-1,0,0,3,3,3,0,0,0];
     var nums2 = [1,2,2];
     merge(nums1,6,nums2,3);
-    console.log("....................");
+    console.log("..........1..........");
     console.log(nums1);
 };
 
