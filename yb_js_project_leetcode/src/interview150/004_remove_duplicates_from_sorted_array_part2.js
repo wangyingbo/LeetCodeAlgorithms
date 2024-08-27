@@ -15,20 +15,7 @@
 
 // 删除有序数组中的重复项（中等）
 var removeDuplicates = function(nums) {
-    let i = 0;
-    let j = 0;
-
-    while (j < nums.length) {
-        if (nums[i] === nums[j]) {
-            j++;
-        } else {
-            nums[i + 1] = nums[j];
-            i++;
-            j++;
-        }
-    }
-
-    return i + 1;
+    return 0;
 
 };
 
@@ -37,8 +24,11 @@ var removeDuplicates = function(nums) {
  * @param {number[]} nums
  * @return {number}
  */
-var start_remove_duplicates_from_sorted_array_2 = function(nums) {
-    return removeDuplicates(nums);
+var start_remove_duplicates_from_sorted_array_2 = function() {
+    let nums = [1,1,1,2,2,3];
+    let len = removeDuplicates(nums);
+    console.log("..........4..........");
+    console.log("004_test:",len);
 };
 
 export { start_remove_duplicates_from_sorted_array_2 }

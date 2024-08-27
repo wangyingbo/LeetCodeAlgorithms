@@ -1,7 +1,7 @@
-import { start_merge_array } from './interview150/1_merge_array.js';
-import { start_remove_element } from './interview150/2_remove_element.js';
-import { start_remove_duplicates_from_sorted_array } from './interview150/3_remove_duplicates_from_sorted_array.js';
-import { start_remove_duplicates_from_sorted_array_2 } from './interview150/3_remove_duplicates_from_sorted_array_2.js';
+import { start_merge_array } from './interview150/001_merge_array.js';
+import { start_remove_element } from './interview150/002_remove_element.js';
+import { start_remove_duplicates_from_sorted_array } from './interview150/003_remove_duplicates_from_sorted_array.js';
+import { start_remove_duplicates_from_sorted_array_2 } from './interview150/004_remove_duplicates_from_sorted_array_part2.js';
 
 
 
